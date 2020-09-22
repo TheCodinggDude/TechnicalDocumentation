@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <center><h1>C Programming Language</h1></center>
+    <hr noshade="50" size="5" />
+    <details>
+      <summary>Contents</summary>
+      <a href="#introduction">Introduction</a>
+      <br />
+      <a href="#charset">C character set</a>
+      <br />
+      <a href="#constants">Constants</a>
+      <br />
+      <a href="#variables">Variables</a>
+      <br />
+      <a href="#keywords">Keywords</a>
+      <br />
+      <a href="#identifier">Identifiers</a>
+      <br />
+      <a href="#operator">Operators</a>
+      <br />
+      <a href="#rules">Rules applicable to all C programs</a>
+      <br />
+      <a href="#comment">Comments</a>
+    </details>
+    <center><h2 id="introduction">Introduction</h2></center>
+    <p>
+      C is a programming language developed at AT & T's Bell laboratory in USA
+      in 1972. It was designed and written by Dennis Ritchie. C quickly became
+      popular because it is simple, reliable and easy to use. In an industry
+      where new technologies come and go every day, a language that has survived
+      for 3 years has to be really good.
+    </p>
+    <h4>Why you should learn C?</h4>
+    <ul>
+      <li>
+        It is very difficult to learn C++ or Java directly.This is because while
+        learning these languages you have to learn about OOPS concepts. Learning
+        such complicated concepts while you are not even comfortable with basic
+        concepts is like pulling the cart before the horse. Hence one should
+        learn all language elements very thoroughly using C before migrating to
+        C++/Java/Python.
+      </li>
+      <li>
+        Major parts of Windows operating system such as Windows, UNIX, Linux is
+        still written in C. Hence when it comes to performance, nothing beats C.
+      </li>
+      <li>
+        Electronic devices such as Microwave Oven, Washing Machine and digital
+        cameras use a program embedded in their devices. They not only have to
+        run fast but also have to work in limited amount of memory. They are
+        also written in C language.
+      </li>
+      <li>Many popular gaming frameworks are also built using C language.</li>
+    </ul>
+    <center><h2>Getting started</h2></center>
+    <h3 id="charset">C character set</h3>
+    <p>
+      The below figure shows valid alphabets, numbers and symbols allowed in C.
+    </p>
+    <center>
+      <img
+        src="https://image.slidesharecdn.com/clanguagebook-150318130401-conversion-gate01/95/c-language-4-638.jpg?cb=1426684010"
+        alt="C character set"
+        height="300"
+        width="450"
+      />
+    </center>
+    <h3 id="constants">Constants</h3>
+    <p>
+      Constants refer to fixed values that the program may not alter during its
+      execution. These fixed values are also called literals.
+    </p>
+    <br />
+    To know more about C constants,
+    <a href="constants.html">&#8594; Click here &#8592;</a>
+    <h3 id="variables">Variables</h3>
+    <p>
+      A variable is nothing but a name given to a storage area that our programs
+      can manipulate. Each variable in C has a specific type, which determines
+      the size and the variable's memory, the range of values that can be stored
+      within that memory and the set of operations that can be applied to the
+      variable.
+    </p>
+    <h3 id="keywords">Keywords</h3>
+    <p>
+      Keywords are the words whose meaning has already been explained to the C
+      compiler. The keywords canot be used as variable name because if we do we
+      are trying to assign a new meaning to the keyword,which is not allowed by
+      the computer.
+    </p>
+    <p>
+      There are 32 keywords available in C. Following is the list of keywords in
+      C
+    </p>
+    <table
+      border="0"
+      summary="List of all keywords used in C programming language."
+      cellpadding="5"
+    >
+      <tbody>
+        <tr>
+          <td>auto</td>
+          <td>break</td>
+          <td>case</td>
+          <td>char</td>
+        </tr>
+        <tr>
+          <td>const</td>
+          <td>continue</td>
+          <td>default</td>
+          <td>do</td>
+        </tr>
+        <tr>
+          <td>double</td>
+          <td>else</td>
+          <td>enum</td>
+          <td>extern</td>
+        </tr>
+        <tr>
+          <td>float</td>
+          <td>for</td>
+          <td>goto</td>
+          <td>if</td>
+        </tr>
+        <tr>
+          <td>int</td>
+          <td>long</td>
+          <td>register</td>
+          <td>return</td>
+        </tr>
+        <tr>
+          <td>short</td>
+          <td>signed</td>
+          <td>sizeof</td>
+          <td>static</td>
+        </tr>
+        <tr>
+          <td>struct</td>
+          <td>switch</td>
+          <td>typedef</td>
+          <td>union</td>
+        </tr>
+        <tr>
+          <td>unsigned</td>
+          <td>void</td>
+          <td>volatile</td>
+          <td>while</td>
+        </tr>
+      </tbody>
+    </table>
+    <h3 id="identifier">Identifiers</h3>
+    <p>
+      Identifier refers to name given to entities such as variables, functions,
+      structures etc. Identifiers must be unique. They are created to give a
+      unique name to an entity to identify it during the execution of the
+      program. For example:
+    </p>
+    <p>
+      int money;
+      <br />
+      double accountBalance;
+    </p>
+    <h4>Rules for naming Identifiers</h4>
+    <ul>
+      <li>
+        A valid identifier can have letters (both uppercase and lowercase
+        letters), digits and underscores.
+      </li>
+      <li>
+        The first letter of an identifier should be either a letter or an
+        underscore.
+      </li>
+      <li>You cannot use keywords like int, break etc. as identifiers.</li>
+      <li>
+        There is no rule on how long an identifier can be. However, you may run
+        into problems in some compilers if the identifier is longer than 31
+        characters.
+      </li>
+    </ul>
+    <h3 id="operator">Operators</h3>
+    <p>
+      An operator is a symbol that operates on one or more values or variables. For
+      example: + is an operator to perform addition.
+    </p>
+    <p>C has a wide range of operators to perform various operations.</p>
+    <ol>
+      <li>
+        <h4>Arithmetic Operators</h4>
+        <table cellpadding="5">
+          <thead>
+            <tr>
+              <th>Operator</th>
+              <th>Meaning of Operator</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>+</td>
+              <td>addition or unary plus</td>
+            </tr>
+            <tr>
+              <td>-</td>
+              <td>subtraction or unary minus</td>
+            </tr>
+            <tr>
+              <td>*</td>
+              <td>multiplication</td>
+            </tr>
+            <tr>
+              <td>/</td>
+              <td>division</td>
+            </tr>
+            <tr>
+              <td>%</td>
+              <td>remainder after division (modulo division)</td>
+            </tr>
+          </tbody>
+        </table>
+      </li>
+      <li>
+        <h4>Increment and Decrement Operators</h4>
+        <p>
+          C programming has two operators increment (<strong>++</strong>) and
+          decrement (<strong>--</strong>) to change the value of an operand
+          (constant or variable) by 1.
+        </p>
+        <p>
+          Increment (<strong>++</strong>) increases the value by 1 whereas
+          decrement (<strong>--</strong>) decreases the value by 1. These two
+          operators are unary operators, meaning they only operate on a single
+          operand.
+        </p>
+      </li>
+      <li>
+        <h4>Assignment Operators</h4>
+        <table cellpadding="7">
+          <thead>
+            <tr>
+              <th>Operator</th>
+              <th>Example</th>
+              <th>Same as</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>=</td>
+              <td>a = b</td>
+              <td>a = b</td>
+            </tr>
+            <tr>
+              <td>+=</td>
+              <td>a += b</td>
+              <td>a = a+b</td>
+            </tr>
+            <tr>
+              <td>-=</td>
+              <td>a -= b</td>
+              <td>a = a-b</td>
+            </tr>
+            <tr>
+              <td>*=</td>
+              <td>a *= b</td>
+              <td>a = a*b</td>
+            </tr>
+            <tr>
+              <td>/=</td>
+              <td>a /= b</td>
+              <td>a = a/b</td>
+            </tr>
+            <tr>
+              <td>%=</td>
+              <td>a %= b</td>
+              <td>a = a%b</td>
+            </tr>
+          </tbody>
+        </table>
+      </li>
+      <li>
+        <h4>Relational Operators</h4>
+        <p>
+          A relational operator checks the relationship between two operands. If
+          the relation is true, it returns 1; if the relation is false, it
+          returns value 0.
+        </p>
+        <p>Relational operators are used in decision making and loops.</p>
+        <table cellpadding="6">
+          <thead>
+            <tr>
+              <th>Operator</th>
+              <th>Meaning of Operator</th>
+              <th><center>Example</center></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>==</td>
+              <td>Equal to</td>
+              <td>5 == 3 is evaluated to 0</td>
+            </tr>
+            <tr>
+              <td>&gt;</td>
+              <td>Greater than</td>
+              <td>5 &gt; 3 is evaluated to 1</td>
+            </tr>
+            <tr>
+              <td>&lt;</td>
+              <td>Less than</td>
+              <td>5 &lt; 3 is evaluated to 0</td>
+            </tr>
+            <tr>
+              <td>!=</td>
+              <td>Not equal to</td>
+              <td>5 != 3 is evaluated to 1</td>
+            </tr>
+            <tr>
+              <td>&gt;=</td>
+              <td>Greater than or equal to</td>
+              <td>5 &gt;= 3 is evaluated to 1</td>
+            </tr>
+            <tr>
+              <td>&lt;=</td>
+              <td>Less than or equal to</td>
+              <td>5 &lt;= 3 is evaluated to 0</td>
+            </tr>
+          </tbody>
+        </table>
+      </li>
+      <li>
+        <h4>Logical Operators</h4>
+        <p>
+          An expression containing logical operator returns either 0 or 1
+          depending upon whether expression results true or false. Logical
+          operators are commonly used in decision making in C programming.
+        </p>
+        <table cellpadding="5">
+          <thead>
+            <tr>
+              <th><center>Operator</center></th>
+              <th><center>Meaning</center></th>
+              <th><center>Example</center></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>&amp;&amp;</td>
+              <td>Logical AND. True only if all operands are true</td>
+              <td>
+                If c = 7 and d = 3 then, expression
+                <code>((c==7) &amp;&amp; (d&gt;7))</code> equals to 0.
+              </td>
+            </tr>
+            <tr>
+              <td>||</td>
+              <td>Logical OR. True only if either one operand is true</td>
+              <td>
+                If c = 7 and d = 3 then, expression
+                <code>((c==7) || (d&gt;7))</code> equals to 1.
+              </td>
+            </tr>
+            <tr>
+              <td>!</td>
+              <td>Logical NOT. True only if the operand is 0</td>
+              <td>
+                If c = 7 then, expression <code>!(c==7)</code> equals to 0.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </li>
+      <li>
+        <h4>Bitwise operators</h4>
+        <p>
+          During computation, mathematical operations like: addition,
+          subtraction, multiplication, division, etc are converted to bit-level
+          which makes processing faster and saves power.
+        </p>
+        <p>
+          Bitwise operators are used in C programming to perform bit-level
+          operations.
+        </p>
+        <table cellpadding="6">
+          <thead>
+            <tr>
+              <th>Operators</th>
+              <th>Meaning of operators</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>&amp;</td>
+              <td>Bitwise AND</td>
+            </tr>
+            <tr>
+              <td>|</td>
+              <td>Bitwise OR</td>
+            </tr>
+            <tr>
+              <td>^</td>
+              <td>Bitwise exclusive OR</td>
+            </tr>
+            <tr>
+              <td>~</td>
+              <td>Bitwise complement</td>
+            </tr>
+            <tr>
+              <td>&lt;&lt;</td>
+              <td>Shift left</td>
+            </tr>
+            <tr>
+              <td>&gt;&gt;</td>
+              <td>Shift right</td>
+            </tr>
+          </tbody>
+        </table>
+      </li>
+    </ol>
+
+    <h3 id="rules">Rules applicable to all C programs</h3>
+    <ol type="i">
+      <li>
+        Each instruction in a C program is written as a seperate statement.
+        Therefore a complete C program would comprise of a series of statements.
+      </li>
+      <li>
+        The statements in the program must appear in the same order in which we
+        wish them to be executed.
+      </li>
+      <li>All statements are entered in lowercase letters.</li>
+      <li>
+        Every C statement must end with a <strong>;</strong>. Therefore
+        <strong>;</strong> acts as a <em>statement terminator</em>.
+      </li>
+    </ol>
+    <h3 id="comment">Comments</h3>
+    <p></p>
+  </body>
+</html>
