@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>C Programming</title>
+    <title>Document</title>
   </head>
   <body>
     <center><h1>C Programming Language</h1></center>
@@ -26,7 +26,7 @@
       <br />
       <a href="#rules">Rules applicable to all C programs</a>
       <br />
-      <a href="#comment">Comments</a>
+      <a href="#datatype">Data Types</a>
     </details>
     <center><h2 id="introduction">Introduction</h2></center>
     <p>
@@ -185,8 +185,8 @@
     </ul>
     <h3 id="operator">Operators</h3>
     <p>
-      An operator is a symbol that operates on one or more values or variables. For
-      example: + is an operator to perform addition.
+      An operator is a symbol that operates on one or more values or variables.
+      For example: + is an operator to perform addition.
     </p>
     <p>C has a wide range of operators to perform various operations.</p>
     <ol>
@@ -352,7 +352,7 @@
               <td>Logical AND. True only if all operands are true</td>
               <td>
                 If c = 7 and d = 3 then, expression
-                <code>((c==7) &amp;&amp; (d&gt;7))</code> equals to 0.
+                ((c==7) &amp;&amp; (d&gt;7)) equals to 0.
               </td>
             </tr>
             <tr>
@@ -360,14 +360,14 @@
               <td>Logical OR. True only if either one operand is true</td>
               <td>
                 If c = 7 and d = 3 then, expression
-                <code>((c==7) || (d&gt;7))</code> equals to 1.
+                ((c==7) || (d&gt;7)) equals to 1.
               </td>
             </tr>
             <tr>
               <td>!</td>
               <td>Logical NOT. True only if the operand is 0</td>
               <td>
-                If c = 7 then, expression <code>!(c==7)</code> equals to 0.
+                If c = 7 then, expression !(c==7) equals to 0.
               </td>
             </tr>
           </tbody>
@@ -437,7 +437,112 @@
         <strong>;</strong> acts as a <em>statement terminator</em>.
       </li>
     </ol>
-    <h3 id="comment">Comments</h3>
-    <p></p>
+    <h3 id="datatype">Data Types</h3>
+    <p>
+      In C programming, data types are declarations for variables. They
+      determine the type and size of data associated with variables. For
+      example :
+    </p>
+    <p>int var;</p>
+    <p>Here var is variable of <em>int</em> type and its size is 4 bytes.</p>
+    <center><img src="https://www.circuitstoday.com/wp-content/uploads/2012/06/Data-Types.jpeg" alt="Data types in C" height="250" width="400"></center>
+    <table cellpadding="5" cellspacing="1">
+      <thead>
+        <tr>
+          <th align="left">Type</th>
+          <th align="left">Size (bytes)</th>
+          <th><center>Format Specifier</center></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>int</td>
+          <td>at least 2, usually 4</td>
+          <td>%d</td>
+        </tr>
+        <tr>
+          <td>char</td>
+          <td>1</td>
+          <td>%c</td>
+        </tr>
+        <tr>
+          <td>float</td>
+          <td>4</td>
+          <td>%f</td>
+        </tr>
+        <tr>
+          <td>double</td>
+          <td>8</td>
+          <td>%lf</td>
+        </tr>
+        <tr>
+          <td>short int</td>
+          <td>2 usually</td>
+          <td>%hd</td>
+        </tr>
+        <tr>
+          <td>unsigned int</td>
+          <td>at least 2, usually 4</td>
+          <td>%u</td>
+        </tr>
+        <tr>
+          <td>long int</td>
+          <td>at least 4, usually 8</td>
+          <td>%ld</td>
+        </tr>
+        <tr>
+          <td>long long int</td>
+          <td>at least 8</td>
+          <td>%lld</td>
+        </tr>
+        <tr>
+          <td>unsigned long int</td>
+          <td>at least 4</td>
+          <td>%lu</td>
+        </tr>
+        <tr>
+          <td>unsigned long long int</td>
+          <td>at least 8</td>
+          <td>%llu</td>
+        </tr>
+        <tr>
+          <td>signed char</td>
+          <td>1</td>
+          <td>%c</td>
+        </tr>
+        <tr>
+          <td>unsigned char</td>
+          <td>1</td>
+          <td>%c</td>
+        </tr>
+        <tr>
+          <td>long double</td>
+          <td>at least 10, usually 12 or 16</td>
+          <td>%Lf</td>
+        </tr>
+      </tbody>
+    </table>
+    <h3>Primitive Data type</h3>
+    <h4><u><em>int</em> Data type</u></h4>
+    <p>Integers are whole numbers that can have both zero, positive and negative values but no decimal values. int can take 2<sup>32</sup> distinct states from -2147483648 to 2147483647.</p>
+    <p>You can declare multiple variables at once in C programming. For example,</p>
+    <p>int rollNo,age;</p>
+    <h4><u><em>char</em> Data type</u></h4>
+    <p>Keyword <em>char</em> is used for declaring character type variables. The size of the character variable is 1 byte. For example,</p>
+    <p>char ch = 'a';</p>
+    <h4><u><em>float and double</em> Data type</u></h4>
+    <p>float and double are used to hold real numbers. For example,</p>
+    <p>float salary;</p>
+    <p>double price;</p>
+    <p>In C, floating-point numbers can also be represented in exponential. For example,</p>
+    <div>float G = 6.674e-11;</div>
+    <h3>Data Type Modifiers</h3>
+    <h4><u><em>short and long</em></u></h4>
+    <p>short variables are used to hold short integers by using keyword <em>short</em>. Whereas long variables are used to hold long integers by using keyword <em>long</em>.</p>
+    <div>shorts are at least 2 bytes big and long are at least 4 bytes big. The value of long integer typically vary from <strong>-2147483648</strong> to <strong>+2147483647</strong></div>
+    <h4><u><em>signed and unsigned</em></u></h4>
+    <div>When we know that the data that will be stored in an int variable will always be positive, we use unsigned modifier. For example,</div>
+    <div>unsigned int num_of_students;</div>
+    
   </body>
 </html>
